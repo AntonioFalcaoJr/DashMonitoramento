@@ -1,0 +1,97 @@
+﻿<Window x:Class="DashMonitoramento.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DashMonitoramento"
+        xmlns:eo="http://schemas.essentialobjects.com/wpf/"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="MainWindow" 
+        Background="{x:Null}" 
+        Foreground="{x:Null}">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <eo:WebControl Grid.Column="0">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource CloudWatchApi}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+            <eo:WebControl Grid.Column="1">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource CloudWatchDb}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+            <eo:WebControl Grid.Column="2">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource GrafanaAcelerometro}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <eo:WebControl Grid.Column="0">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource StatusSync}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+            <eo:WebControl Grid.Column="1">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource NewRelic}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+            <eo:WebControl Grid.Column="2">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource CodePipeLine}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+            <eo:WebControl Grid.Column="3">
+                <eo:WebControl.WebView>
+                    <eo:WebView Url="{StaticResource StatusCheckHiper}" 
+                                LoadCompleted="WebView_LoadCompleted" 
+                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                </eo:WebControl.WebView>
+            </eo:WebControl>
+
+        </Grid>
+    </Grid>
+</Window>
