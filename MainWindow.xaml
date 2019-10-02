@@ -25,27 +25,33 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <eo:WebControl Grid.Column="0">
+            <eo:WebControl Grid.Column="0" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource CloudWatchApi}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
-            <eo:WebControl Grid.Column="1">
+            <eo:WebControl Grid.Column="1" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource CloudWatchDb}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
-            <eo:WebControl Grid.Column="2">
+            <eo:WebControl Grid.Column="2" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource GrafanaAcelerometro}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
@@ -60,35 +66,43 @@
                 <ColumnDefinition Width="1.2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <eo:WebControl Grid.Column="0">
+            <eo:WebControl Grid.Column="0" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource StatusSync}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
-            <eo:WebControl Grid.Column="1">
+            <eo:WebControl Grid.Column="1" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource NewRelic}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
-            <eo:WebControl Grid.Column="2">
+            <eo:WebControl Grid.Column="2" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource CodePipeLine}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 
-            <eo:WebControl Grid.Column="3">
+            <eo:WebControl Grid.Column="3" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
                     <eo:WebView Url="{StaticResource StatusCheckHiper}" 
                                 LoadCompleted="WebView_LoadCompleted" 
-                                MouseDoubleClick="WebView_MouseDoubleClick"></eo:WebView>
+                                MouseDoubleClick="WebView_MouseDoubleClick" 
+                                LoadFailed="WebView_LoadFailed">
+                    </eo:WebView>
                 </eo:WebControl.WebView>
             </eo:WebControl>
 

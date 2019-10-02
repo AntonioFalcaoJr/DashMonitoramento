@@ -13,7 +13,7 @@
             <system:String x:Key="NewRelic">https://rpm.newrelic.com/accounts/1924863/applications</system:String>
             <system:String x:Key="StatusCheckHiper">http://status.hiper.com.br/</system:String>
             <system:String x:Key="CodePipeLine">https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1#</system:String>
-            <system:String x:Key="StatusSync">https://admin.hiper.com.br/</system:String>
+            <system:String x:Key="StatusSync">http://servidor01:8022/</system:String>
 
         </ResourceDictionary>
     </Application.Resources>

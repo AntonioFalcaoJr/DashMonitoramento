@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
+using System.Windows.Input;
 using EO.WebBrowser;
 
 namespace DashMonitoramento
@@ -30,12 +32,28 @@ namespace DashMonitoramento
         private void WebView_MouseDoubleClick(object sender, EO.Base.UI.MouseEventArgs e)
         {
             var view = (EO.Wpf.WebView)sender;
-            _webViews.Add(view);
+
             view.Reload();
+
+            if (_webViews.Any(x => x == view))
+            {
+                _webViews.Remove(view);
+                return;
+            }
+
+            _webViews.Add(view);
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e) => ReloadViews();
 
         private void ReloadViews() => _webViews.ForEach(view => view?.Reload());
+
+        private void WebControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F5)
+                ((EO.Wpf.WebControl) sender).WebView.Reload();
+        }
+
+        private void WebView_LoadFailed(object sender, LoadFailedEventArgs e) => ((EO.Wpf.WebView) sender).LoadHtml(e.ErrorMessage);
     }
 }
