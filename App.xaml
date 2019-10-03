@@ -6,15 +6,13 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-
             <system:String x:Key="CloudWatchDb">https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Producao-BancoDeDados;expand=true</system:String>
             <system:String x:Key="CloudWatchApi">https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Producao-Aplicacao;expand=true;start=PT1H</system:String>
             <system:String x:Key="GrafanaAcelerometro">http://3.223.255.213:3000/d/HRQEHspWk/importacaodedados?orgId=1&amp;from=now-5m&amp;to=now&amp;refresh=5m&amp;kiosk</system:String>
             <system:String x:Key="NewRelic">https://rpm.newrelic.com/accounts/1924863/applications</system:String>
-            <system:String x:Key="StatusCheckHiper">http://status.hiper.com.br/</system:String>
+            <system:String x:Key="StatusCheckHiper">http://servidor01:8022/</system:String>
             <system:String x:Key="CodePipeLine">https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1#</system:String>
-            <system:String x:Key="StatusSync">http://servidor01:8022/</system:String>
-
+            <system:String x:Key="StatusSync">https://admin.hiper.com.br/</system:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
