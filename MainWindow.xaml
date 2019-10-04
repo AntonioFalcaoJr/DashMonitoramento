@@ -47,7 +47,7 @@
 
             <eo:WebControl Grid.Column="2" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
-                    <eo:WebView Url="{StaticResource GrafanaAcelerometro}" 
+                    <eo:WebView Url="{StaticResource StatusSync}" 
                                 LoadCompleted="WebView_LoadCompleted" 
                                 MouseDoubleClick="WebView_MouseDoubleClick" 
                                 LoadFailed="WebView_LoadFailed">
@@ -68,7 +68,7 @@
 
             <eo:WebControl Grid.Column="0" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
-                    <eo:WebView Url="{StaticResource StatusSync}" 
+                    <eo:WebView Url="{StaticResource GrafanaAcelerometro}" 
                                 LoadCompleted="WebView_LoadCompleted" 
                                 MouseDoubleClick="WebView_MouseDoubleClick" 
                                 LoadFailed="WebView_LoadFailed">
