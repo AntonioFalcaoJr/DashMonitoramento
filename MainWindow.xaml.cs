@@ -22,7 +22,7 @@ namespace DashMonitoramento
 
             var dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0, 5, 0);
+            dispatcherTimer.Interval = new TimeSpan(0, 4, 0);
             dispatcherTimer.Start();
         }
 
@@ -35,11 +35,7 @@ namespace DashMonitoramento
 
             view.Reload();
 
-            if (_webViews.Any(x => x == view))
-            {
-                _webViews.Remove(view);
-                return;
-            }
+            if (_webViews.Any(x => x == view)) return;
 
             _webViews.Add(view);
         }

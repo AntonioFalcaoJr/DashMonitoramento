@@ -61,9 +61,9 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="1.2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <eo:WebControl Grid.Column="0" KeyDown="WebControl_KeyDown">
@@ -78,7 +78,7 @@
 
             <eo:WebControl Grid.Column="1" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
-                    <eo:WebView Url="{StaticResource NewRelic}" 
+                    <eo:WebView Url="{StaticResource StatusCheckHiper}" 
                                 LoadCompleted="WebView_LoadCompleted" 
                                 MouseDoubleClick="WebView_MouseDoubleClick" 
                                 LoadFailed="WebView_LoadFailed">
@@ -98,7 +98,7 @@
 
             <eo:WebControl Grid.Column="3" KeyDown="WebControl_KeyDown">
                 <eo:WebControl.WebView>
-                    <eo:WebView Url="{StaticResource StatusCheckHiper}" 
+                    <eo:WebView Url="{StaticResource NewRelic}" 
                                 LoadCompleted="WebView_LoadCompleted" 
                                 MouseDoubleClick="WebView_MouseDoubleClick" 
                                 LoadFailed="WebView_LoadFailed">
